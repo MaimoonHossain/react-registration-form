@@ -1,0 +1,74 @@
+/* RegistrationForm.css */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Set body height to viewport height */
+  background: linear-gradient(
+    to bottom right,
+    #d80bb6,
+    rgb(16, 203, 224)
+  ); /* Gradient background */
+}
+
+.registration-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+}
+
+.registration-form-container h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  color: green;
+  text-align: center; /* Center text horizontally */
+  padding: 20px; /* Adjust padding as needed */
+  background-color: #fff; /* Example background color with opacity */
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
