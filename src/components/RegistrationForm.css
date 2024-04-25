@@ -1,13 +1,12 @@
-/* RegistrationForm.css */
 body {
   margin: 0;
   padding: 0;
-  height: 100vh; /* Set body height to viewport height */
+  height: 100vh; 
   background: linear-gradient(
     to bottom right,
     #d80bb6,
     rgb(16, 203, 224)
-  ); /* Gradient background */
+  ); 
 }
 
 .registration-form-container {
@@ -53,9 +52,9 @@ body {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   color: green;
-  text-align: center; /* Center text horizontally */
-  padding: 20px; /* Adjust padding as needed */
-  background-color: #fff; /* Example background color with opacity */
+  text-align: center; 
+  padding: 20px;
+  background-color: #fff; 
 }
 
 .error-message {
