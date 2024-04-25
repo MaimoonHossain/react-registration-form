@@ -5,8 +5,6 @@ const useFormValidation = (formData, validate) => {
   const [errors, setErrors] = useState({});
   const [isFormValid, setIsFormValid] = useState(false);
 
-  console.log("formData", formData);
-
   useEffect(() => {
     if (formData && validate) {
       validateForm();
