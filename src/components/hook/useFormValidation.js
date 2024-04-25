@@ -1,4 +1,3 @@
-// useFormValidation.js
 import { useState, useEffect } from "react";
 
 const useFormValidation = (formData, validate) => {
@@ -17,7 +16,7 @@ const useFormValidation = (formData, validate) => {
   const validateForm = () => {
     const newErrors = {};
 
-    // Validate each field
+    // Here validating each field
     if (!formData.firstName.trim()) {
       newErrors.firstName = "First name is required";
     }
@@ -45,7 +44,7 @@ const useFormValidation = (formData, validate) => {
       newErrors.confirmPassword = "Passwords do not match";
     }
 
-    // Check if there are any errors
+    // Checking if there are any errors
     const isValid = Object.keys(newErrors).length === 0;
     setErrors(newErrors);
     setIsFormValid(isValid);
