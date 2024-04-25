@@ -6,6 +6,7 @@ import "./RegistrationForm.css";
 const RegistrationForm = () => {
   const [fieldsFilled, setFieldsFilled] = useState(false);
   const [validate, setValidate] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   // State for form inputs
   const [formData, setFormData] = useState({
     firstName: "",
@@ -65,6 +66,7 @@ const RegistrationForm = () => {
         password: "",
         confirmPassword: "",
       });
+      setSubmitted(true);
     } else {
       console.log("Form validation failed");
     }
@@ -72,7 +74,7 @@ const RegistrationForm = () => {
 
   return (
     <>
-      {!isFormValid && (
+      {!submitted && (
         <div className="registration-form-container">
           <>
             <h2>Register</h2>
@@ -162,7 +164,7 @@ const RegistrationForm = () => {
           </>
         </div>
       )}
-      {isFormValid && (
+      {submitted && (
         <div className="success-message">
           <h2>Form submitted successfully!!</h2>
         </div>
