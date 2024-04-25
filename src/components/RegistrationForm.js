@@ -1,4 +1,3 @@
-// RegistrationForm.js
 import React, { useState, useEffect } from "react";
 import useFormValidation from "./hook/useFormValidation";
 import "./RegistrationForm.css";
@@ -7,7 +6,7 @@ const RegistrationForm = () => {
   const [fieldsFilled, setFieldsFilled] = useState(false);
   const [validate, setValidate] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  // State for form inputs
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -17,6 +16,7 @@ const RegistrationForm = () => {
     confirmPassword: "",
   });
 
+  // Here checking if all the fileds are filled
   useEffect(() => {
     if (
       formData?.firstName &&
@@ -32,7 +32,7 @@ const RegistrationForm = () => {
     }
   }, [formData]);
 
-  // Custom hook for form validation
+
 
   // Function to handle input change and form validation
   const handleInputChange = (e) => {
@@ -44,20 +44,14 @@ const RegistrationForm = () => {
     });
   };
 
+    // Custom hook for form validation
   const { errors, isFormValid } = useFormValidation(formData, validate);
 
   // Function to handle form submission
   const handleSubmit = (e) => {
     setValidate(true);
     e.preventDefault();
-    // Validate form
-    // const isValid = validateForm(formData);
-    // console.log("hello");
-    // console.log("valid", isValid);
     if (isFormValid) {
-      // Display form data in console
-      console.log(formData);
-      // Clear form inputs
       setFormData({
         firstName: "",
         lastName: "",
